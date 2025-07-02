@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>설문조사 양식</title>
+</head>
+<body>
+    <header>
+        <h1>설문조사 양식</h1>
+        <p>모든 항목에 빠짐없이 체크해주십시오.</p>
+    </header>
+    <hr>
+    <main>
+        <form>
+            <fieldset>
+                <legend>개인정보</legend>
+                <label for="name">이름</label>
+                <input type="text" name="name" id="name" placeholder="본명을 입력하세요">
+                <br>
+                <label for="email">이메일</label>
+                <input type="email" name="email" id="email" placeholder="메일 주소를 입력하세요">
+            </fieldset>
+            <fieldset>
+                <legend>설문</legend>
+
+                <p>1. 연령대가 어떻게 되십니까</p>
+                <input type="radio" id="teen" name="age">
+                <label for="teen">10대</label>
+                <input type="radio" id="twenty" name="age">
+                <label for="twenty">20대</label>
+                <input type="radio" id="thirty" name="age">
+                <label for="thirty">30대</label>
+                <input type="radio" id="fourty" name="age">
+                <label for="fourty">40대</label>
+                <input type="radio" id="fifty" name="age">
+                <label for="fifty">50대</label>
+                <input type="radio" id="other" name="age">
+                <label for="other">50대이상</label>
+                <br>
+                <br>
+
+                <p>2. 한 달에 쇼핑으로 지출하는 금액은 어느 정도인가요?</p>
+                <input type="radio" id="under5" name="money">
+                <label for="under5">5만원이하</label>
+                <input type="radio" id="5to20" name="money">
+                <label for="5to20">5~20만원</label>
+                <input type="radio" id="20to50" name="money">
+                <label for="20to50">20~50만원</label>
+                <input type="radio" id="50over" name="money">
+                <label for="50over">50만원이상</label>
+                <br>
+                <br>
+
+                <p>3. 쇼핑을 주로 하는 방식은 무엇인가요?</p>
+                <input type="checkbox" id="offline" name="style"> 
+                <label for="offline">오프라인 매장</label>
+                <input type="checkbox" id="online" name="style"> 
+                <label for="online">온라인 쇼핑몰</label>
+                <input type="checkbox" id="used" name="style"> 
+                <label for="used">중고 거래 플랫폼</label>
+                <br>
+                <br>
+
+                <p>4. 주로 어떤걸 구매하시나요?</p>
+                <input type="checkbox" id="clothes" name="spending"> 
+                <label for="clothes">옷</label>
+                <input type="checkbox" id="cosmetics" name="spending"> 
+                <label for="cosmetics">화장품</label>
+                <input type="checkbox" id="game" name="spending"> 
+                <label for="game">게임</label>
+                <input type="checkbox" id="book" name="spending">
+                <label for="book">책</label>
+                <br>
+                <br>
+
+            </fieldset>
+            <fieldset>
+                <legend>기타의견</legend>
+                <textarea rows="4" cols="50" name="comment"></textarea>
+            </fieldset>
+            <input type="submit">
+        </form>   
+    </main>
+    <hr>
+    <footer>
+        <p>입력하느라 수고하셨습니다.</p>
+    </footer>
+</body>
+</html>
