@@ -1,0 +1,28 @@
+*{
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+html{
+    background-color: #edf473;
+}
+
+body{
+    width: 640px;
+    margin: auto;
+}
+
+h1{
+    font-size: 36px;
+    color: blue;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+}
+
+p{
+    font-size: 1.2rem;
+}
