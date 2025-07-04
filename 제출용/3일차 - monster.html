@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>몬스터 잡기 게임</title>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        let monsterHP = 100
+        const container = document.getElementById('container')
+        const h1 = document.createElement('h1')
+        h1.textContent = '몬스너 잡기 게임 시작'
+        container.appendChild(h1)
+
+        let attack = parseInt(prompt('1회당 데미지 (양의 정수)'))
+        let acount = 0
+
+        if(attack > 0){
+            while(monsterHP > 0){
+                monsterHP -= attack
+                acount += 1
+
+                const p = document.createElement('p')
+                p.textContent = `${acount}회 공격했다`
+                container.append(p)
+
+                const strong = document.createElement('strong')
+                strong.textContent = `몬스터의 남은 HP는 ${monsterHP}입니다!`
+                container.append(strong)
+
+                if(monsterHP < 0){
+                    strong.textContent= `몬스터의 남은 HP는 0입니다!`
+                }
+
+            }
+            
+            const h2 = document.createElement('h2')
+            h2.textContent = '토벌 완료! 수고하셨습니다'
+            h2.style.color = 'orange'
+            h2.title = '다시할려면 새로고침'
+            container.appendChild(h2)
+
+
+
+        }else{
+            alert('제대로 입력하세요')
+        }
+    </script>
+    
+</body>
+</html>

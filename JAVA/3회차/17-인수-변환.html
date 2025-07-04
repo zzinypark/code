@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인수 & 변환</title>
+</head>
+<body>
+
+    <div id="container"></div>
+    
+    <script>
+
+        createParagraph('1','red')
+        createParagraph('2','green')
+        createParagraph('3','blue')
+
+        function createParagraph(a,color){
+            const p = document.createElement('p')
+            p.style.color = color
+            p.textContent = a
+            document.querySelector('#container').append(p)
+        }
+
+        function sample(){
+            console.log('반환 기능')
+            
+            return '0000'
+        }
+
+        sample()
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 만들기</title>
+</head>
+<body>
+    
+    <h1></h1>
+    <p></p>
+
+    <script>
+        const h1 = document.querySelector('h1')
+        const p = document.querySelector('p')
+
+        const isThere = confirm("제목을 표시할까요?")
+
+        if(isThere){
+            h1.textContent = '버스비는?'
+        }
+
+        const age = parseInt(prompt('나이는?'))
+
+        if(age >= 20){
+            p.textContent = '1250원'
+        }
+        else if(age >= 8){
+            p.textContent = '750원'
+        }
+        else{
+            p.textContent = '무료'
+        }
+    </script>
+</body>
+</html>
