@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eaeaea;
+}
+
+
+#container {
+  width: 640px;
+  margin: 60px auto 0;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+form {
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 15px;
+}
+
+.table {
+  width: 80%;
+  margin: atuo;
+}
+
+th {
+  width: 40%;
+  text-align: right;
+  padding: 5px;
+}
+
+td {
+  width: 60%;
+  text-align: left;
+  padding-left: 5px;
+}
+
+input, select{
+  width: 240px;
+}
+
+input[type="radio"]{
+  width: initial;
+}
+
+input[type="submit"]{
+  background-color: #2073c1;
+  color: #ffffff;
+  width: 80px;
+}
+input[type="submit"]:hover{
+  background-color: #2c83d4;
+  color: #ffffff;
+
+}
+
+.buttons {
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+#email-id,
+#email-domain,
+#custom-domain{
+  height: 30px;
+  width: 120px;
+}
+
+#custom-domain{
+  margin-left: 138px;
+}
+
+.num{
+  width: 50px;
+}

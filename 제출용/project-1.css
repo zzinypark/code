@@ -1,0 +1,156 @@
+#nationbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+#inquiry{
+  height: 30px;
+  width: 50px;
+  background-color: #4f59e7;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+
+.nation{
+    padding: 5px 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    color: blue;
+    background-color: white;
+}
+.nation:first-child{
+  border-radius: 8px 0 0 8px;
+}
+.nation:last-child{
+  border-radius: 0 8px 8px 0;
+}
+.nation:hover{
+    background-color: #dbdada;
+    color: #01a501
+}
+body.dark .nation:hover{
+  background-color: #453e3e;
+}
+
+#gender{
+  margin-top: 2%;
+  width: 80%;
+}
+
+#time{
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+
+#join{
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+body.dark{
+  background-color: #121212;
+  color: white;
+}
+
+#nationbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+#inquiry{
+  height: 30px;
+  width: 50px;
+  background-color: #4f59e7;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+
+.nation{
+    padding: 5px 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    color: blue;
+    background-color: white;
+}
+.nation:first-child{
+  border-radius: 8px 0 0 8px;
+}
+.nation:last-child{
+  border-radius: 0 8px 8px 0;
+}
+.nation:hover{
+    background-color: #dbdada;
+    color: #01a501
+}
+
+#gender{
+  margin-top: 2%;
+  width: 80%;
+}
+
+#time{
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+
+#join{
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+#darkbtn{
+  position: absolute;
+  top: 50px;
+  right: 130px;
+}
+
+body.dark{
+  background-color: #121212;
+  color: white;
+}
+body.dark #inquiry,
+body.dark #gender,
+body.dark #inlineFormSelectPref,
+body.dark .nation{
+  background-color: #727272;
+  color: #ffffff;
+}
+body.dark table.table {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark table.table th,
+body.dark table.table td {
+  background-color: #2a2a2a;
+  color: white;
+  border-color: #444;
+}
+
+body.dark table.table thead th {
+  background-color: #333;
+  color: #00ffcc;
+}
+
+body.dark table.table tbody tr:hover {
+  background-color: #3a3a3a;
+}
+
+body.dark #search{
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #2a2a2a;
+}
+body.dark #search::placeholder {
+  color: #bbbbbb;
+}
