@@ -1,16 +1,14 @@
 from flask import Flask
-from flask_mysqldb import MySQL
 from flask_smorest import Api
-from user_routes import create_user_blueprint
+from db import db
+from models import User, Board
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'oz-flask'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@localhost/oz'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-mysql = MySQL(app)
+db.init_app(app)
 
 app.config["API_TITLE"] = "My API"
 app.config["API_VERSION"] = "v1"
@@ -20,11 +18,23 @@ app.config["OPENAPI_SWAGGER_UI_PATH"] = "/swagger-ui"
 app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
 
 api = Api(app)
-user_blp = create_user_blueprint(mysql)
+
+from routes.board import board_blp
+from routes.user import user_blp
+api.register_blueprint(board_blp)
 api.register_blueprint(user_blp)
 
-
 from flask import render_template
-@app.route('/user_interface')
-def user_interface():
-    return render_template("users.html")
+@app.route('/manage-boards')
+def manage_boards():
+    return render_template('boards.html')
+
+@app.route('/manage-user')
+def manage_user():
+    return render_template('users.html')
+
+if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
+
+    app.run(debug=True)
