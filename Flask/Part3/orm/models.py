@@ -6,6 +6,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(30), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
+    address = db.Column(db.String(120), nullable=False)
     boards = db.relationship('Board', back_populates='author', lazy='dynamic')
 
 class Board(db.Model):
