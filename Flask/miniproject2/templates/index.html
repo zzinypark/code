@@ -1,0 +1,33 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>사용자 목록</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        .user-box { border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; }
+        .post { margin-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>사용자 목록 및 게시글</h1>
+
+    {% for user in users %}
+        <div class="user-box">
+            <h2>{{ user.username }}</h2>
+            <h4>게시글:</h4>
+            {% if user.posts %}
+                {% for post in user.posts %}
+                    <div class="post">
+                        <strong>{{ post.title }}</strong> - 좋아요 {{ post.likes }}개
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="post">게시글 없음</div>
+            {% endif %}
+        </div>
+    {% endfor %}
+</body>
+</html>
