@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ujh@*0g1+pp$r_bdl)y8=irik!a&i@!6$i^)oakwnk+q7)=lcj'
+SECRET_KEY = 'django-insecure-*z3zr$n!)6$q$48x5q65gi(wb!mbm0rmtcm9v@r7=nhxd=pua7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -30,24 +30,15 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-DJANGO_APPS = [
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'todo',
 ]
-
-OWN_APPS = [
-    'bookmark',
-]
-
-THIRD_PARTY_APPS = [
-    'django_extensions'
-]
-
-INSTALLED_APPS = DJANGO_APPS + OWN_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -64,7 +55,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/ 'templates'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -112,7 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'ko-KR'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
