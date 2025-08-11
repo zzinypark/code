@@ -1,6 +1,6 @@
 from flask_login import UserMixin
 
-users = {'admin': {'password':'pw123'}}
+users = {"admin": {"password": "pw123"}}
 
 
 class User(UserMixin):
@@ -11,5 +11,5 @@ class User(UserMixin):
     def get(user_id):
         if user_id in users:
             return User(user_id)
-        
+
         return None
